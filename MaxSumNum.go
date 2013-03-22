@@ -109,7 +109,7 @@ func main() {
 	//list := []int{23, 12, -34, 56, -100, 5, 18, -92, 11, 20}
 	var list []int
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
-	for i := 0; i < 10000000; i++ {
+	for i := 0; i < 10000; i++ {
 		if r.Intn(2) == 1 {
 			list = append(list, -r.Intn(100))
 		} else {
@@ -117,9 +117,9 @@ func main() {
 		}
 	}
 	fmt.Println(len(list))
-	//t1 := maxSumNum1(list)
+	t1 := maxSumNum1(list)
 	//t2 := maxSumNum2(list)
 	//t3 := maxSumNum3(list)
-	t4 := maxSumNum4(list)
-	fmt.Println(t4)
+	//t4 := maxSumNum4(list)
+	fmt.Println(t1)
 }
